@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Verify Mobile </TITLE>
+<script>
+function Verify()
+{
+var mobile=document.getElementById("txtMobile").value;
+var regExp=/\+91[0-9]{10}/;
+var msg=document.getElementById("msg");
+
+if(mobile.match(regExp))
+{
+document.write("Mobile Verified ");
+}
+else
+{
+document.write("Invalid Mobile Number ");
+}
+}
+</script>
+</HEAD>
+
+<BODY>
+<div>
+<form>
+Mobile Number:
+<input type="txt" id="txtMobile"
+placeholder="+91 10 digit number ">
+<!--<span id="msg"></span> -->
+<br>
+<input type="button" value="Verify Mobile" onclick="Verify()";
+</form>
+</div>
+</BODY>
+</HTML>
